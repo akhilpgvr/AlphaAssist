@@ -1,0 +1,15 @@
+.body {
+    margin: 50px 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.submit-section:hover{
+    border: 2px solid #ff00ff;
+    background-image: linear-gradient(45deg, #3f0028, #582300);
+    transform: scale(1.05);
+    transition: 0.4s;
+}

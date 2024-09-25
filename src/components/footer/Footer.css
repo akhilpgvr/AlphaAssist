@@ -1,0 +1,18 @@
+.footer{
+    margin: 50px 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 18px;
+}
+.footer-bottom-right{
+    display:flex;
+    gap: 50px;
+    margin-bottom: 70px;
+}

@@ -1,0 +1,8 @@
+.header{
+    margin: 50px 170px;
+    gap: 35px;
+}
+.header-top{
+    display: flex;
+    justify-content: space-between;
+}
