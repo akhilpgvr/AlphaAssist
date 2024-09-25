@@ -4,14 +4,43 @@ import './Body.css'
 const Body = () => {
 
   const[question, setQuestion] = useState('');
+  const[response, setResponse] = useState('');
 
   const onChangeSetQUestion = async (event) => {
     setQuestion(event.target.value)
   };
-  const onSubmit = async (event) => {
-  
-    console.log(question)
+
+  const onSubmit = async () => {
+    try {
+      console.log(question);
+      const result = await fetch('http://localhost:9980/alpha-assist/v1/connect/ask-alpha', {
+        method: 'POST',
+        headers: {
+          'accept': '*/*',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          "contents": [
+            {
+              "parts": [
+                {
+                  "text": question
+                }
+              ]
+            }
+          ]
+        })
+      });
+      const data = await result.json(); // Convert response to JSON
+      setResponse(data.resultText.text); // Save the response in the state
+      console.log(response);
+    } catch (error) {
+      console.error('Error calling API:', error);
+    }
   };
+  
+  
+  
 
   return (
     <div className="body">
@@ -24,7 +53,7 @@ const Body = () => {
       </div>
 
       <div className="answer-section">
-        <textarea readOnly style={{ width: '800px', height: '300px' }} class="form-control" aria-label="With textarea" placeholder=''></textarea>
+        <textarea value={response} readOnly style={{ width: '800px', height: '300px' }} class="form-control" aria-label="With textarea" placeholder=''></textarea>
       </div>
     </div>
   )
