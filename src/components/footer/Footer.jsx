@@ -10,7 +10,7 @@ const Footer = () => {
         <hr/>
         <div className="footer-bottom">
             <div className="footer-bottom-left">
-                <p>© 2024 Akhil P S. All rights reserved.</p>
+                <p>© 2024 Aps Studio. All rights reserved.</p>
             </div>
             <div className="footer-bootom-right">
                 <p>Terms of Services</p>

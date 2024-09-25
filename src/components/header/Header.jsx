@@ -11,7 +11,6 @@ const Header = () => {
             <img src={ai_logo} alt="logo of Aps" className="logo" />
           </a>
           <h1>AlphaAssist</h1>
-          
         </div>
 
         <div className="header-right">

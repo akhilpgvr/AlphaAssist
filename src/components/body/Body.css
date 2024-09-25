@@ -7,9 +7,18 @@
     gap: 35px;
 }
 
-.submit-section:hover{
-    border: 2px solid #ff00ff;
-    background-image: linear-gradient(45deg, #3f0028, #582300);
+.submit-section button{
+    border: none;
+    color: white;
+    border-radius: 50px;
+    background: #9f6207;
+    font-size: 22px;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.3s
+}
+.submit-section button:hover{
     transform: scale(1.05);
-    transition: 0.4s;
+    transition: 0.3s;
 }
