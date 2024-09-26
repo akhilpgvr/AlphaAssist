@@ -45,7 +45,7 @@ const Body = () => {
   return (
     <div className="body">
       <div className="question-section">
-        <textarea onChange={onChangeSetQUestion} style={{ width: '800px', height: '200px' }} class="form-control" aria-label="With textarea" placeholder='Ask your question here'></textarea>
+        <textarea onChange={onChangeSetQUestion} style={{ width: '1050px', height: '250px' }} class="form-control" aria-label="With textarea" placeholder='Ask your question here'></textarea>
       </div>
 
       <div className="submit-section">
@@ -53,7 +53,7 @@ const Body = () => {
       </div>
 
       <div className="answer-section">
-        <textarea value={response} readOnly style={{ width: '800px', height: '300px' }} class="form-control" aria-label="With textarea" placeholder=''></textarea>
+        <textarea value={response} readOnly style={{ width: '1050px', height: '350px' }} class="form-control" aria-label="With textarea" placeholder=''></textarea>
       </div>
     </div>
   )
